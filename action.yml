@@ -1,0 +1,16 @@
+name: custom action
+
+description: greet someone
+
+inputs:
+  who-to-greet:
+    description: 'Who to greet'
+    required: true
+    default: 'Hallo World'
+
+outputs:
+  time:
+    description: 'The time we greeted you'
+
+runs:  using: 'node12'
+  main: dist/index.js
