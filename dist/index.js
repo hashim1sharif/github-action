@@ -27558,12 +27558,14 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(7484);
 
 try {
-    const name = core.getInput('who-to-greet');
-    console.log(`Hello ${nameToGreet}!`);
-    core.setOutput('time', new Date().toTimeString());
+  const nameToGreet = core.getInput("who-to-greet");
+  console.log(`Hello ${nameToGreet}!`);
+  const time = new Date().toTimeString();
+  core.setOutput("time", time);
 } catch (error) {
-    core.setFailed(error.message);
+  core.setFailed(error.message);
 }
+
 module.exports = __webpack_exports__;
 /******/ })()
 ;
