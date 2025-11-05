@@ -1,10 +1,15 @@
 name: "Hello Action"
 description: "Greets someone"
+
 inputs:
-  name:
-    description: "Name to greet"
-    required: false
+  who-to-greet:
+    description: "who to greet"
+    required: true
     default: "world"
+
+    outputs:
+    time:
+      description: "time we greeted"
 runs:
   using: "node20"
   main: "dist/index.js"
