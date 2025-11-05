@@ -1,0 +1,17 @@
+name: custom action
+
+on: [push]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: hello world action
+      uses: hashim1sharif/github-action@main
+      with:
+        who-to-greet: 'hashim'
