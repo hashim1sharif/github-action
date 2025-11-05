@@ -1,16 +1,10 @@
-name: custom action
-
-description: greet someone
-
+name: "Hello Action"
+description: "Greets someone"
 inputs:
-  who-to-greet:
-    description: 'Who to greet'
-    required: true
-    default: 'Hallo World'
-
-outputs:
-  time:
-    description: 'The time we greeted you'
-
-runs:  using: 'node12'
-  main: dist/index.js
+  name:
+    description: "Name to greet"
+    required: false
+    default: "world"
+runs:
+  using: "node20"
+  main: "dist/index.js"
